@@ -15,7 +15,7 @@ define htaccess::file($directory, $user, $password, $owner="www", $group="www", 
 	}	
 
 	file  {"${directory}/.htaccess": 
-		content => template("htaccessauth/htaccess.erb"),
+		content => template("htaccess/htaccess.erb"),
 		owner => $owner,
 		group => $group
 	}
